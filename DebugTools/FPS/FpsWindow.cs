@@ -1,4 +1,4 @@
-﻿namespace GrammyDevStudio.WinForms_GameCore.Debug.FPS
+﻿namespace GrammyDevStudio.WinForms_GameCore.DebugTools.FPS
 {
     public partial class FpsWindow : Form
     {

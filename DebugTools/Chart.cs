@@ -1,4 +1,4 @@
-﻿namespace GrammyDevStudio.WinForms_GameCore.Debug
+﻿namespace GrammyDevStudio.WinForms_GameCore.DebugTools
 {
     internal class Chart
     {
