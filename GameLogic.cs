@@ -2,7 +2,7 @@
 
 namespace GrammyDevStudio.WinForms_GameCore
 {
-    class EngineLogic
+    public class GameLogic
     {
         internal CoreForm CoreForm;
 
@@ -10,9 +10,9 @@ namespace GrammyDevStudio.WinForms_GameCore
         long LogicTime;
         long RenderingTime;
 
-        internal virtual ICamera Camera { get; set; }
+        public virtual ICamera Camera { get; set; }
 
-        internal EngineLogic(CoreForm CoreForm)
+        public GameLogic(CoreForm CoreForm)
         {
             this.CoreForm = CoreForm;
         }

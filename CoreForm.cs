@@ -1,41 +1,39 @@
-using GrammyDevStudio.WinForms_GameCore.Debug.FPS;
+using GrammyDevStudio.WinForms_GameCore.DebugTools.FPS;
 
 namespace GrammyDevStudio.WinForms_GameCore
 {
-    public abstract partial class CoreForm : Form
+    public partial class CoreForm : Form
     {
-        internal EngineLogic Logic;
+        public GameLogic GameLogic;
         public FpsWindow FpsWindow;
 
         public CoreForm()
         {
             InitializeComponent();
-
-            Logic = new EngineLogic(this);
             FpsWindow = new FpsWindow();
         }
 
         private void FpsLimiter_Tick(object sender, EventArgs e)
         {
-            Logic.FrameUpdate();
+            GameLogic.FrameUpdate();
         }
 
         private void FpsCounterTimer_Tick(object sender, EventArgs e)
         {
-            Logic.GetFPSData();
+            GameLogic.GetFPSData();
         }
 
-        internal void LoadGame()
+        public void LoadGame()
         {
-            Logic.LoadGame();
+            GameLogic.LoadGame();
         }
 
-        internal void PauseLogic()
+        public void PauseLogic()
         {
             FpsLimiter.Stop();
         }
 
-        internal void StartGame()
+        public void StartGame()
         {
             FpsLimiter.Start();
             FpsCounterTimer.Start();
